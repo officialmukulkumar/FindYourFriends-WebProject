@@ -30,9 +30,11 @@ public class Register extends HttpServlet {
 				String phone = request.getParameter("phone");
 				String gender = request.getParameter("gender");
 				String d = request.getParameter("dob");
+				
 				java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat("dd/MM/yyyy");
 				java.util.Date dt = sdf.parse(d);
 				java.sql.Date dob = new java.sql.Date(dt.getTime());
+				
 				String state = request.getParameter("state");
 				String city = request.getParameter("city");
 				String area = request.getParameter("area");

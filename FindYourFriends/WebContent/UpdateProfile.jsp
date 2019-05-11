@@ -12,14 +12,15 @@
 	if(UserDetails !=null){
 		
 		String state = request.getParameter("state");
-		String userState = (String)UserDetails.get("state");
+		//String userState = (String)UserDetails.get("state");
 		
-		if(state.equalsIgnoreCase(userState)){
+		if(!state.equalsIgnoreCase("SELECT STATE")){
 		
 		String e = (String)UserDetails.get("email");
 		String name = request.getParameter("name");
 		String phone = request.getParameter("phone");
 		String gender = request.getParameter("gender");
+		
 		String d = request.getParameter("dob");
 		java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat("dd/MM/yyyy");
 		java.util.Date dt = sdf.parse(d);
